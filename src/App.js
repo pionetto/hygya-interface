@@ -1,24 +1,28 @@
 import Home from './components/Home';
 import Sobre from './components/Sobre';
 import Pacientes from './components/Pacientes';
-import {BrowserRouter, Routes, Link, Route} from 'react-router-dom';
+import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
+import {Nav} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Minha Aplicação React</h1>
+      <h1>HYGYA PACS</h1>
       <BrowserRouter>
-      <ul>
-          <li> <Link to="/">Pagina inicial </Link></li>
-          <li> <Link to="/pacientes">Listagem Pacientes </Link></li>
-          <li> <Link to="/sobre">Sobre </Link></li>
-      </ul>
+
+      <Nav variant="tabs">
+        <Nav.Link as={Link} to="/">Página Inicial</Nav.Link>
+        <Nav.Link as={Link} to="/pacientes">Listagem dos Exames</Nav.Link>
+        <Nav.Link as={Link} to="/sobre">Sobre</Nav.Link>
+      </Nav>
+
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/pacientes" element={<Pacientes/>}></Route>
         <Route path="/sobre" element={<Sobre/>}></Route>
       </Routes>
-      
+
       </BrowserRouter>
     </div>
   );
