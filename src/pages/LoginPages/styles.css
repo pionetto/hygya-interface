@@ -5,10 +5,11 @@
     justify-content: center;
     min-height: 100vh;
     padding: 0 2rem;
+    background-color: #e4a4ec;
 }
 
 #login .form {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     width: 100%;
     max-width: 480px;
     padding: 0.5rem;
@@ -16,6 +17,7 @@
 
 #login .field{
     padding-bottom: 0.5rem;
+    
 }
 
 #login .field label{
@@ -23,10 +25,20 @@
 }
 
 #login .field input{
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 #login .actions {
     text-align: center;
     margin-top: 0.5rem;
+}
+
+#login img{
+    /* max-width:800px; */
+    max-height:300px;
+    width: auto;
+    height: auto;
 }

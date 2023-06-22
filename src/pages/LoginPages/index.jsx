@@ -4,6 +4,8 @@ import { AuthContext } from "../../contexts/auth";
 
 import "./styles.css";
 
+import HygyaLogo from "../../assets/images/hygya-logo.png"
+
 const LoginPage = () => {
     const { authenticated, login } = useContext(AuthContext);
 
@@ -19,12 +21,13 @@ const LoginPage = () => {
 
     return (
         <div id="login">
-            <h1 className="title">Login do Sistema</h1>
-            <p>{String(authenticated)}</p>
+            <img src={HygyaLogo} id="hygya-logo" />
+            {/* <p>{String(authenticated)}</p> */}
                 <form className="form" onSubmit={handleSubmit}>
                     <div className="field">
-                        <label htmlFor="email">Email</label>
-                        <input 
+                        <label htmlFor="email"></label>
+                        <input
+                            placeholder="Login (E-mail)"
                             type="email" 
                             name="email" 
                             id="email" 
@@ -33,8 +36,9 @@ const LoginPage = () => {
                             />
                     </div>
                     <div className="field">
-                        <label htmlFor="password">Senha</label>
+                        <label htmlFor="password"></label>
                         <input 
+                            placeholder="Senha"
                             type="password" 
                             name="password"
                             value={password}
