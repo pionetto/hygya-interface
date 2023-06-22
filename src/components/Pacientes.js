@@ -7,38 +7,30 @@ class Pacientes extends React.Component{
         super(props);
 
         this.state = {
-            pacientes : [
-                {
-                    'id': 1,
-                    'prioridade': '1',
-                    'paciente': 'Paulo Ricardo',
-                    'sexo': 'M',
-                    'id_paciente': '3123489',
-                    'procedimento': 'TC Crânio',
-                    'modalidade': 'CT',
-                    'data_exame': '2023-01-20T00:00:00Z',
-                    'data_laudo': '2023-01-20T00:00:00Z'
-                  },
-                  {
-                    'id': 2,
-                    'prioridade': '1',
-                    'paciente': 'João Rodrigues de Almeida',
-                    'sexo': 'M',
-                    'id_paciente': '3246600',
-                    'procedimento': 'TORAX',
-                    'modalidade': 'CR',
-                    'data_exame': '2023-01-03T00:00:00Z',
-                    'data_laudo': '2023-01-03T00:00:00Z'
-                  }
-
-            ]
-
-
+            pacientes : [ ]
         }
+    }
+
+    //É chamado quando o componente é montado e aparece na tela
+    //Chama a API via metodo GET ao clicar no componente
+    componentDidMount(){
+
+        fetch("http://localhost:5000/api/v1/paciente/")
+        .then(resposta => resposta.json())
+        .then(dados => {
+            this.setState({ pacientes : dados })
+        })
+    }
+
+    //É chamado quando o componente some da tela, é desmontado
+    componentWillUnmount(){
+        
     }
 
     render (){
         return (
+        
+        <React.StrictMode>
         <Table striped bordered hover>
             <thead>
                 <tr>
@@ -78,6 +70,7 @@ class Pacientes extends React.Component{
 
             </tbody>
         </Table>
+        </React.StrictMode>
         )
     }
 }

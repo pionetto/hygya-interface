@@ -1,11 +1,21 @@
-import Home from './components/Home';
-import Sobre from './components/Sobre';
-import Pacientes from './components/Pacientes';
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
-import {Nav} from 'react-bootstrap';
+// import Home from './components/Home';
+// import Sobre from './components/Sobre';
+// import Pacientes from './components/Pacientes';
+// import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
+// import {Nav} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginPage from './pages/LoginPages';
+import HomePage from './pages/HomePage';
+import AppRoutes from './AppRoutes';
 
 function App() {
+
+  return (
+    <div className="app">
+      <AppRoutes />
+    </div>
+  )
+/*
   return (
     <div className="App">
       <h1>HYGYA PACS</h1>
@@ -26,6 +36,8 @@ function App() {
       </BrowserRouter>
     </div>
   );
+*/
+
 }
 
 export default App;
