@@ -6,6 +6,8 @@ import "./styles.css";
 
 import HygyaLogo from "../../assets/images/hygya-logo.png"
 
+import { Button, Form, Col, Row }from 'react-bootstrap';
+
 const LoginPage = () => {
     const { authenticated, login } = useContext(AuthContext);
 
@@ -18,11 +20,10 @@ const LoginPage = () => {
         console.log("submit", { email, password });
         login(email, password); //integração com o contexto e com a API
     }
-
     return (
         <div id="login">
             <img src={HygyaLogo} id="hygya-logo" />
-            {/* <p>{String(authenticated)}</p> */}
+
                 <form className="form" onSubmit={handleSubmit}>
                     <div className="field">
                         <label htmlFor="email"></label>
@@ -35,6 +36,7 @@ const LoginPage = () => {
                             onChange={(e) => setEmail(e.target.value)} 
                             />
                     </div>
+
                     <div className="field">
                         <label htmlFor="password"></label>
                         <input 
@@ -45,9 +47,11 @@ const LoginPage = () => {
                             onChange={(e) => setPassword(e.target.value)}
                             />
                     </div>
+
                     <div className="actions">
-                        <button type="submit">Entrar</button>
+                        <Button variant="outline-secondary" type="submit">Entrar</Button>
                     </div>
+
                 </form>
         </div>
     );

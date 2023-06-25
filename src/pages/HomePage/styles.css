@@ -1,27 +1,20 @@
-#login {
-    display: flex;
+.principal {
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     padding: 0 2rem;
-    /* background-color: #e4a4ec; */
     background-image: linear-gradient( to right, rgb(241, 226, 245), transparent, rgb(168, 100, 185) );
-}
-
-/* #login .form {
+    /* background-color: #e4a4ec; */
+}       
+/* 
+#login .form {
     background-color: #ffffff;
     width: 100%;
     max-width: 480px;
     padding: 0.5rem;
-    
-    border-style: ridge;
-    border-bottom-width: 2px;
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-left-width: 2px;
-    border-color:rgb(199, 171, 206)
-} */
+}
 
 #login .field{
     padding-bottom: 0.5rem;
@@ -33,22 +26,21 @@
 }
 
 #login .field input{
-    width: 90%;
+    width: 60%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    border-radius: 6px;
 }
 
 #login .actions {
     text-align: center;
     margin-top: 0.5rem;
-}
+} */
 
-#login img{
+.hygya-logo{
     /* max-width:800px; */
-    max-height:300px;
+    max-height: 200px;
     width: auto;
     height: auto;
-    padding-bottom: 50px;
+    display: flex;
 }

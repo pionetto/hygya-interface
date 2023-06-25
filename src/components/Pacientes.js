@@ -1,6 +1,8 @@
 import React from "react";
 import {Table} from "react-bootstrap";
 
+// import { AuthProvider, AuthContext } from "./contexts/auth"
+
 class Pacientes extends React.Component{
     
     constructor(props){
@@ -67,7 +69,6 @@ class Pacientes extends React.Component{
 
                     )
                 }
-
             </tbody>
         </Table>
         </React.StrictMode>
